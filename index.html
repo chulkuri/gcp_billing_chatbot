@@ -56,6 +56,42 @@
       font-size: 0.9rem;
       margin-top: auto;
     }
+    /* FAQ Styles */
+    .faq-section {
+      margin-top: 2rem;
+      font-size: 0.95rem;
+    }
+
+    .faq-toggle {
+      background-color: #4b6cb7;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+    }
+
+    .faq-content {
+      display: none;
+      padding: 15px 20px;
+      background-color: #f1f5ff;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    .faq-content ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .faq-content li {
+      margin-bottom: 10px;
+      color: #333;
+    }
   </style>
 </head>
 <body>
@@ -82,6 +118,21 @@
   <p>
     Please use the chat window at the bottom-right to interact with our billing assistant anytime!
   </p>
+
+  <!-- FAQ Dropdown Section -->
+  <div class="faq-section">
+    <button class="faq-toggle">▶️ Frequently Asked Questions</button>
+    <div class="faq-content">
+      <ul>
+        <li>How can I check today’s billing?</li>
+        <li>What is the billing for the current month?</li>
+        <li>How do I see project-wise billing reports?</li>
+        <li>Can I view idle projects from the last 30 days?</li>
+        <li>How can I analyze daily billing trends?</li>
+      </ul>
+    </div>
+  </div>
+
 </main>
 
 <!-- Dialogflow Chatbot Embed -->
@@ -112,6 +163,18 @@
 <footer>
   © 2025 ISPL Technologies. All rights reserved.
 </footer>
+
+<script>
+  const toggle = document.querySelector('.faq-toggle');
+  const content = document.querySelector('.faq-content');
+
+  toggle.addEventListener('click', () => {
+    content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+    toggle.textContent = content.style.display === 'block' 
+      ? '🔽 Frequently Asked Questions' 
+      : '▶️ Frequently Asked Questions';
+  });
+</script>
 
 </body>
 </html>
