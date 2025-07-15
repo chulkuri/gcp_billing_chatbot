@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ISPL GCP Billing Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #74ebd5, #acb6e5);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: #4b6cb7;
+      background: linear-gradient(to right, #182848, #4b6cb7);
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600;
+      color: white;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    main {
+      flex: 1;
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 1.8rem;
+      color: #4b6cb7;
+      font-weight: 700;
+      text-align: center;
+    }
+    p {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.6;
+      text-align: center;
+    }
+    footer {
+      background: #0f172a;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  ISPL GCP Billing Dashboard 💰
+</header>
+
+<main>
+  <h1><strong>Welcome to ISPL Billing Chatbot!</strong></h1>
+  <p>
+    This chatbot-powered dashboard helps you track and monitor your Google Cloud billing in real time. 
+    Using our Firebase Billing Co-Pilot, you can ask questions about your project costs, usage patterns, 
+    and receive actionable recommendations to optimize your cloud spending.
+  </p>
+  <p>
+    You can check:
+    <br>
+    • Project-wise billing summaries<br>
+    • Daily, monthly, or custom range billing reports<br>
+    • Cost comparisons and trends<br>
+    • Savings suggestions based on your current consumption
+  </p>
+  <p>
+    Please use the chat window at the bottom-right to interact with our billing assistant anytime!
+  </p>
+</main>
+
+<!-- Dialogflow Chatbot Embed -->
+<link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+<df-messenger
+  project-id="videosemanticsearch"
+  agent-id="12eaa546-2feb-4b7f-8d2b-da2788543556"
+  language-code="en"
+  max-query-length="-1">
+  <df-messenger-chat-bubble chat-title="Firebase Billing Co-Pilot"></df-messenger-chat-bubble>
+</df-messenger>
+
+<style>
+  df-messenger {
+    z-index: 999;
+    position: fixed;
+    --df-messenger-font-color: #000;
+    --df-messenger-font-family: Poppins;
+    --df-messenger-chat-background: #f3f6fc;
+    --df-messenger-message-user-background: #d3e3fd;
+    --df-messenger-message-bot-background: #ffffff;
+    bottom: 20px;
+    right: 20px;
+  }
+</style>
+
+<footer>
+  © 2025 ISPL Technologies. All rights reserved.
+</footer>
+
+</body>
+</html>
